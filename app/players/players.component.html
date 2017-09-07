@@ -1,0 +1,8 @@
+<ul class="listOfPlayers">
+  <li *ngFor='let player of _playerList'>{{player.firstname}}&nbsp;{{player.lastname}}&nbsp;<span (click)='removePlayer()'>X</span></li>
+</ul>
+<form>
+  <input name='firstname' [(ngModel)]='_newPlayer.firstname' type='text'/>
+  <input name='lastname' [(ngModel)]='_newPlayer.lastname' type='text'/>
+  <button (click)='addPlayer()'>Add</button>
+</form>
